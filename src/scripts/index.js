@@ -5,11 +5,23 @@ import '../styles/main.scss';
 
 
 // \/ All of your javascript should go here \/
-const modal = document.querySelector('.modal')
+// const modal = document.querySelector('.modal')
 
-const popup = new Promise((resolve, reject)=>{
-setTimeout(()=>{
-modal.style.display = 'block'
-},6000)
-})
+// const popup = new Promise((resolve, reject)=>{
+// setTimeout(()=>{
+// modal.style.display = 'block'
+// },6000)
+// })
+const modal = document.querySelector(".modal");
+const popUp = new Promise(() => {
+setTimeout(() => {
+modal.style.display = "block";
+}, 1000);
+});
 
+const close = document.querySelector(".close");
+const closeWindow = () => {
+modal.style.display = "none";
+};
+
+close.addEventListener("click", closeWindow); 
